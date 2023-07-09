@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+
+<section>
+<div class="card text-center">
+  <div class="card-header">
+   <img src="" style="height:175px; width:175px;"  
+						class="my_profile_picture"
+						th:src="@{'/home/image/logo.png'}"
+						alt="profile photo" /> 
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Library N॰25</h5>
+    <p class="card-text"></p>
+    <a href="https://www.libraryn25.com/home" class="btn bg-primary btn-lg text-white">About us</a>
+  </div>
+  <div class="card-footer text-muted">
+  विद्याधनम् सर्वधनात् प्रधानम्।
+  </div>
+</div>
+</section>
+</body>
+</html>
