@@ -13,6 +13,7 @@
 	<artifactId>SmartLibraryManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SmartLibraryManagement</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -90,34 +91,42 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.eclipse.angus</groupId>
+			<groupId>
+				org.eclipse.angus</groupId>
 			<artifactId>jakarta.mail</artifactId>
 		</dependency>
 
+		
+
+		
+
+		
+
+		<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
 		<dependency>
-			<groupId>jakarta.mail</groupId>
-			<artifactId>jakarta.mail-api</artifactId>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>5.0.1</version>
 		</dependency>
+
+
+		<dependency>
+			<groupId>
+				jakarta.mail</groupId>
+			<artifactId>
+				jakarta.mail-api</artifactId>
+		</dependency>
+
 
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
+				<groupId>
+					org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
-			<plugin>
-				<groupId>com.google.cloud.tools</groupId>
-				<artifactId>appengine-maven-plugin</artifactId>
-				<version>2.4.4</version>
-				<configuration>
-					<version>1</version>
-					<projectId>GCLOUD_CONFIG</projectId>
-				</configuration>
-			</plugin>
-
 		</plugins>
 	</build>
 
