@@ -64,25 +64,33 @@ public class SecurityConfig {
 		 * } catch (Exception e) { e.printStackTrace(); } return null; }
 		 */
 		
-		
-		@Bean
-		public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-			http.csrf().disable()
-			.authorizeHttpRequests()
-			.requestMatchers("/home/**")
-			.permitAll()
-			.anyRequest()
-			.authenticated()
-			.and()
-			.formLogin().loginPage("/home/signin")
-			.defaultSuccessUrl("/user/index");
-			//.loginProcessingUrl("/dologin")
-			//.defaultSuccessUrl("/user/index")
-			//.failureUrl("/login-fail");
-			return http.build(); 
-		}
+		/*
+		 * @Bean public SecurityFilterChain filterChain(HttpSecurity http) throws
+		 * Exception { http .csrf().disable() .authorizeHttpRequests()
+		 * .requestMatchers("/home/**") .permitAll() .anyRequest() .authenticated()
+		 * .and() .formLogin().loginPage("/signin") .defaultSuccessUrl("/user/index");
+		 * 
+		 * //.defaultSuccessUrl("/user/index") //.failureUrl("/login-fail"); return
+		 * http.build(); }
+		 */
+	  
+	  
+	  
+		  @Bean 
+		  public SecurityFilterChain filterChain(HttpSecurity http) throws
+		  Exception { 
+				http.csrf().disable()
+				.authorizeHttpRequests()
+				.requestMatchers("/home/**")
+				.permitAll().anyRequest()
+				.authenticated()
+				.and()
+				.formLogin()
+			    .loginPage("/home/login")
+			    .defaultSuccessUrl("/user/index", true)
+			    .failureUrl("/login.html?error=true");
+				return http.build();
+				}
 		 
-	  
-	  
-	  
+	  	  
 }

@@ -104,12 +104,11 @@ public class SmartController {
 		return "signup";
 	}
 
-	@RequestMapping("/home/signin")
-	public String customlogin(Model model) {
-		model.addAttribute("title", "Login Page");
-		model.addAttribute("user", new User());
-		return "login";
-	}
+	/*
+	 * @RequestMapping("/home/signin") public String customlogin(Model model) {
+	 * model.addAttribute("title", "Login Page"); model.addAttribute("user", new
+	 * User()); return "login"; }
+	 */
 
 	@RequestMapping("/home/forgot")
 	public String openEmailForm() {

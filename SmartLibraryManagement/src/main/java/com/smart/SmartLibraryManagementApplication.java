@@ -1,5 +1,6 @@
  package com.smart;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,5 +9,5 @@ public class SmartLibraryManagementApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SmartLibraryManagementApplication.class, args);
-	}
+	}	
 }
